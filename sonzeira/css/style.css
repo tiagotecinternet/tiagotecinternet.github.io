@@ -1,0 +1,306 @@
+@charset "utf8";
+
+/* www.fonts.google.com >> apos seleção na opcao> import */
+@import 'https://fonts.googleapis.com/css?family=Audiowide|Denk+One|Ubuntu';
+
+/* mobile first
+Criando regras pensando primeiro em um site para dispositivos moveis. */
+
+
+/* Regras utilitárias */
+
+/* Resolve problemas do box model padrão .. ou seja, evita a quebra de layouts devido a soma não-intuitiva de width, height, border, margin  de um elemento. */
+
+*, *::before, *::after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Resolvendo o problema do uso do float, propriedade que permite deixar elementos lado a lado, mas que causa efeitos colaterais em elementos que venha logo depois dele.
+Esta classe deverá sempre ser colocada no elemento pai dos elementos a serem flutuados .. */
+.clearfix::before, .clearfix::after {
+    content: "";
+    display: table;
+}
+
+.clearfix::after { clear: both; }
+.clearfix { *zoom: 1; }
+
+
+/* Web Font Space Age */
+@font-face {
+    font-family: "Space Age";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/SpaceAge.eot?#iefix") 
+        format("embedded-opentype"),
+        url("../fonts/SpaceAge.woff") 
+        format("woff"),
+        url("../fonts/SpaceAge.ttf") 
+        format("truetype"),
+        url("../fonts/SpaceAge.svg") 
+        format("svg");
+}
+
+/* CSS reset */
+p, h1, h2, h3, figure, nav, ul {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background-color: #ebf1f6;
+    background: linear-gradient(
+        to bottom,
+        #ebf1f6 0%, #abd3ee 50%,
+        #89c3eb 51%, #d5ebfb 100%
+    );
+    background-attachment: fixed;
+    font-family: Ubuntu, Arial, sans-serif;     
+}
+
+#container { padding: 1%; }
+
+#topo {
+    padding: 5px;
+    /* background-color: white;
+    border-radius: 5px; */
+}
+
+h1 {
+    font-family: "Space Age", Arial, sans-serif;
+    font-size: 2.4em; /* valor equivalente = 38px */
+    text-shadow: white 2px 2px 2px;
+}
+
+h1 a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #0056a0;
+}
+
+nav {
+    text-align: center;
+    background-color: #0056a0;
+    margin: auto;
+    width: 85%;
+    border-radius: 4px;
+    font-size: 1.125em;  /* 18px */
+}
+
+nav ul { list-style: none; }
+
+nav a:link, nav a:visited {
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: black 1px 1px 3px;
+    color: white;
+    display: block; /* ativa o mouse <display> para linha toda. */
+    line-height: 40px; /* aumenta distancia entre as linhas. */
+}
+
+nav a:hover, nav a:focus {
+    background-color: black;
+}
+
+/* #conteudo */
+main {
+    margin: 1% 0;
+}
+
+main h2, main h3, main p {
+    padding: 1%;
+    margin: 1%;
+}
+
+#destaques, #topo, #geral {
+    background-color: white;
+    border-radius: 4px;
+    margin-bottom: 1%;
+}
+
+/* altura minima para uma tela .. no caso de pouco conteúdo */
+#geral { min-height: 500px;}
+
+/* tornando a imagem responsiva exibindo-a como bloco, com a margem automática para centralizá-la*/
+#destaques img, figure img, video {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+#destaques p {
+    font-size: 0.9em;
+}
+
+#rodape {
+    background-color: #0056a0;
+    border-radius: 5px;
+    text-align: center;
+    padding: 1%;
+    font-size: 0.9em; /* 14px*/
+    color: white;
+    line-height: 40px;
+}
+
+main h2 {
+    color: #0056a0;
+    font-family: "Denk one", cursive, sans-serif;
+}
+
+main h3 {
+    font-family: Audiowide, cursive, sans-serif;
+    border-bottom: 1px;
+    border-bottom-style: solid;
+}
+
+figure {
+    text-align: center;
+    font-weight: bold;
+}
+
+table {
+    width: 90;
+    margin: auto;
+}
+
+caption {
+    color: #0056a0;
+    font-weight: bold;
+    padding: 5px;
+}
+
+th {
+    background-color: #1a5d96;
+    color: white;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+/* odd=ímpar, even=par */
+tr:nth-child(odd) {
+    background-color: lightblue;
+}
+
+/* pega o primeiro 'td' <coluna> indicado na seleção da tabela */
+td:first-child {
+    font-weight: bold;
+}
+
+/* last centraliza a ultima coluna .. ou indicando qual coluna <sequencia>  */
+td:last-child, td:nth-child(2) {
+    text-align: center;
+}
+
+form {
+    margin: auto;
+    width: 90%;
+    max-width: 750px;
+}
+
+input, select, textarea {
+    border: solid 3px #0056a0;
+    border-radius: 3px;
+    box-shadow: rgba(0,0,0,0.5) 2px 2px 10px;
+    margin-top: 2px;
+}
+
+#nome, #email, #telefone, #assunto {
+    height: 50px;
+    width: 100%;
+    padding: 2%;
+    /* text-transform: uppercase;  <caso queira que o texto saia todo em maiusculo> */
+}
+
+#mensagem {
+    width: 100%;
+    padding: 2%;
+}
+
+label {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 100px;
+}
+
+#enviar {
+    border: none;
+    padding: 5%;
+    background-color: #0056a0;
+    color: white;
+    font-weight: bold;
+}
+
+/* #mapa { box-shadow: red 0 0 10px; } */
+
+
+/* Media Queries (consulta de mídia)
+São direticas especias en que o desenvolvedir especifica critérios para alterações no conteúdo e layout do site.
+Em cada media querie, é criado em breakpoint (ponto de adaptação), e dentro dela são definidas regras CSS de acordo com as alterações que são necessárias. */
+@media screen and (min-width: 600px) {
+    #container {
+        width: 95%;
+        margin: auto;
+    }
+    nav {
+        margin: 0%;
+        width: 100%
+    }
+    /*  Tornando o nav horizontal, alterando a exibição dos itens da lista (li) e mantendo os links como blocos ao mesmo tempo 'inline'. */
+    nav li { display: inline; }
+    nav a:link, nav a:visited {
+        display: inline-block;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+}
+
+/* 
+@media screen and (min-width: 1000px) {
+    body {
+        font-size: 22px;
+    }
+} */
+
+@media screen and (min-width: 900px) {
+    body { font-size: 18px; }
+    h1 {
+        float: left;
+        width: 45%;
+        margin: 20px 0;
+    }
+    h1 img {
+        width: 35px;
+        height: 35px;
+    }
+    nav {
+        float: right;
+        width: 55%;
+    }
+}
+
+@media screen and (min-width: 970px) {
+    nav {
+        width: 53%;
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    body { font-size: 20px; }
+    h1 {
+        font-size: 3em;
+        margin: 10px 0;
+    }
+    h1 img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #container { max-width: 1200px; }
+}
+

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Contato - Sonzeira!</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"> <!-- padrão para expansividade do site -->
+    <link rel="icon" href="images/favicon.png" sizes="64x64">  <!-- add o icone no canto da aba da pagina -->
+    <link href="css/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- [if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/css3-mediaqueries.js"></script>
+    <![endif] -->
+   
+    
+</head>
+<body>
+
+<div id="container">
+    <header id="topo" class="clearfix">
+        <h1>
+            <a href="index.html">
+                <img src="images/logo.svg" width="30" alt="Mão Chifrada">Sonzeira!
+            </a>
+        </h1>
+        <!-- nav>ul>(l1>a)*5 -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="classic-rock.html">Classic Rock</a></li>
+                <li><a href="heavy-metal.html">Heavy Metal</a></li>
+                <li><a href="rock-progressivo.html">Rock Progressivo</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    
+    <!-- main id="conteudo" -->
+    <main id="conteudo">
+        
+        <article id="geral">
+            <h2>Contato</h2>
+                <p>Prreencha o formulário abaixo para entrar em contato conosco.</p>
+                <p>Se preferir, utilize o telefone 11-99265-5453 ou o e-mail m_sakalauskas@hotmail.com</p>
+
+            <form action="enviar.php" method="post" autocomplete="off">
+               <p>
+                  <label for="nome">Nome: </label>
+                   <input type="text" id="nome" name="nome" required>
+               </p>
+                <p>
+                  <label for="email">E-mail: </label>
+                   <input type="email" id="email" name="email">
+               </p>
+               <p>
+                  <label for="telefone">Telefone: </label>
+                   <input type="tel" id="telefone" name="telefone" maxlength="15" required>
+               </p>
+               <p>
+                  <label for="assunto">Assunto: </label>
+                   <select name="assunto" id="assunto">
+                       <option value=""></option>
+                       <option>Informações</option>
+                       <option>Dúvidas</option>
+                       <option>Reclamações</option>
+                       <option>Outros</option>
+                   </select>
+               </p>
+               <p>
+                  <label for="mensagem">Mensagem: </label>
+                   <textarea name="mensagem" id="mensagem" cols="50" rows="6" placeholder="Digite sua mensagem aqui"></textarea>
+               </p>
+               <p>
+                   <input type="submit" id="enviar" name="enviar" value="Enviar Dados">
+                   <!-- PODE INSERIR TMB A TAG BUTTOM PARA CAMPO ENVIAR -->
+               </p>
+            </form>
+            <h2>Localização # Visite-nos!</h2>
+                <div id="mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.6753301247795!2d-46.64259382047494!3d-23.544177066918184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5851c0113c65%3A0x7b1bec68bb062bd3!2sR.+Dom+Jos%C3%A9+de+Barros%2C+177+-+Rep%C3%BAblica%2C+S%C3%A3o+Paulo+-+SP!5e0!3m2!1spt-BR!2sbr!4v1472078810498" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <!-- para tornar o mapa expansivo alterado o width p/ 100% -->
+                </div>
+            
+        </article>
+    </main>
+    
+    <footer id="rodape">
+        <p>Site Desenvolvido em Curso por <b>Marcello S.A.</b> | &copy; 2016</p>
+    </footer>
+    
+    
+</div>
+
+
+</body>
+</html>

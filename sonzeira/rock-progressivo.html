@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Rock Progressivo - Sonzeira!</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"> <!-- padrão para expansividade do site -->
+    <link rel="icon" href="images/favicon.png" sizes="64x64">  <!-- add o icone no canto da aba da pagina -->
+    <link href="css/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/style-banner.css">
+    
+    <!-- [if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/css3-mediaqueries.js"></script>
+    <![endif] -->
+   
+    
+</head>
+<body>
+
+<div id="container">
+    <header id="topo" class="clearfix">
+        <h1>
+            <a href="index.html">
+                <img src="images/logo.svg" width="30" alt="Mão Chifrada">Sonzeira!
+            </a>
+        </h1>
+        <!-- nav>ul>(l1>a)*5 -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="classic-rock.html">Classic Rock</a></li>
+                <li><a href="heavy-metal.html">Heavy Metal</a></li>
+                <li><a href="rock-progressivo.html">Rock Progressivo</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    
+    <!-- main id="conteudo" -->
+    <main id="conteudo">
+        
+        <article id="geral">
+        
+            <h2>Rock Progressivo</h2>
+                <p>Rock progressivo (também abreviado por prog rock ou prog) é um estilo de música de rock que surgiu no fim da década de 1960, na Inglaterra.</p>
+                <p>onseguiu se tornar muito popular na década de 1970, mas ainda hoje possui muitos adeptos. O estilo recebeu influências da música clássica e do jazz fusion, em contraste com o rock estadunidense historicamente, influenciado pelo rhythm and blues e pela música country.</p>
+                <p>Conheça uma das principais bandas do gênero:</p>
+             
+            <section>
+                <h3>Pink Floyd</h3>
+                    <p>O Pink Floyd é um dos grupos de rock mais influentes e comercialmente bem-sucedidos da história, tendo vendido mais de 200 milhões de álbuns ao redor do mundo. A banda foi induzida ao Hall da Fama do Rock and Roll em 1996.</p>
+                    <p>O maior destaque do evento Live 8 em 2005 foi a apresentação dos Pink Floyd, pois a banda tocou no Hyde Park, em Londres, com a formação clássica pela primeira vez desde 1981.</p>
+                
+                <figure>
+                    <figcaption><b>Pink Floyd no Live 8</b></figcaption>
+                        <video controls width="354" height="196">
+                            <source src="media/pink-floyd.ogv" type="video/ogg">
+                            <source src="media/pink-floyd.webm" type="video/webm">
+                            <source src="media/pink-floyd.mp4" type="video/mp4">
+                            <p>
+                               <a href="media/pink-floyd.mp4">Download do vídeo MP4</a>
+                            </p>
+                        </video>
+                </figure>
+            </section>
+               
+            <section>
+               <h3>Rush</h3>
+                    <p>Rush é uma banda canadense de rock progressivo formada originalmente em agosto de 1968, na cidade de Toronto, Ontário, composta pelo baixista, tecladista e vocalista Geddy Lee, pelo guitarrista Alex Lifeson, e pelo baterista e letrista Neil Peart. O grupo teve apenas duas formações, além da atual.</p>
+                    
+                    <!-- table>caption{Principais Discos}+tr>th*3 -->
+                    <table>  <!-- table border="1" .. cria como se fosse uma tabela linhas/coluna -->
+                        <caption>Principais Discos</caption>
+                        
+                        <tr> <!-- LINHA -->
+                            <th>Disco</th> <!-- célula de título -->
+                            <th>Ano de Lançamento</th>
+                            <th>Destaque</th>
+                        </tr>
+                        
+                        <tr>
+                            <td>Fly By Night</td> <!-- célula de dados -->
+                            <td>1975</td>
+                            <td>Anthem</td>
+                        </tr>
+                        
+                        <!-- (tr>td*3)*3 -->
+                        <tr>
+                            <td>2112</td>
+                            <td>1976</td>
+                            <td>2112</td>
+                        </tr>
+                        <tr>
+                            <td>Moving Pictures</td>
+                            <td>1981</td>
+                            <td>Tom Sawyer</td>
+                        </tr>
+                        <tr>
+                            <td>Signal</td>
+                            <td>1981</td>
+                            <td>Subdivisions</td>
+                        </tr>
+                        
+                    </table>
+                            
+            </section>
+            
+            
+            <section>
+                <h3>Transatlantic</h3>
+                    <p>O Transatlantic é uma banda norte-americana de rock progressivo formada em 1999 pelo vocalista e tecladista Neal Morse do Spock's Beard e o baterista Mike Portnoy ex-baterista e líder da banda Dream Theater.</p>
+                    <aside id="banner">
+                       <!-- <a href=""></a> poderia incluir um link se necessario -->
+                        <p>Bridge Across Forever</p>
+                        <img src="images/capa.jpg" alt="Capa do disco">
+                    </aside>
+            </section>
+            
+        </article>
+        
+    </main>
+    
+    <footer id="rodape">
+        <p>Site Desenvolvido em Curso por <b>Marcello S.A.</b> | &copy; 2016</p>
+    </footer>
+    
+    
+</div>
+
+
+</body>
+</html>
